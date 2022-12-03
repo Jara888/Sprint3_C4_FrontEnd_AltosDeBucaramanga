@@ -128,6 +128,8 @@ $.ajax({
 
 
 
+/*
+
 function Eliminar(Username)
 {
 
@@ -164,3 +166,4 @@ $.ajax({
 })
 }
 
+*/
