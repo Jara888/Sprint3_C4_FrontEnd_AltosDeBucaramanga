@@ -1,4 +1,4 @@
-//funcion para guardar un nuevo propietario
+//// FUNCION PARA GUARDAR UN NUEVO PROPIETARIO
 
 function Registrar(){
 
@@ -32,7 +32,7 @@ if (data.save==1)
 
 	alert('usuario almacenado correctamente')
 	console.log('usuario almacenado correctamente')
-	//location.href="/Home"
+	location.href='/homeowner'
 }
 
 else
@@ -50,7 +50,7 @@ else
 }
 
 
-// función para mostrar un propietario
+// // FUNCION PARA MOSTRAR UN PROPIETARIO
 
 
 function UserById(){
@@ -127,30 +127,27 @@ $.ajax({
 }
 
 
+// FUNCION PARA ELIMINAR UN PROPIETARIO
 
-/*
 
-function Eliminar(Username)
-{
+function Eliminar(){
 
-let datos={
- 'Username':Username
+    var datos={
+        "Documento_De_Identidad":document.getElementById("documento_De_Identidad").value,     
+    }
 
-}
-console.log(datos)
-
-alert('desde la funcion eliminar')
+    console.log(datos)
 $.ajax({
-	type:"post",
-	url:"http://localhost:3005/DeleteUser",
-	data:datos,
-	datatype:"json",
-	success:function(data){
+    type:"post",
+    url:"http://localhost:3009/DeletePropietario",
+    data:datos,
+    dataType:"json",
+    success:function(data){
         if(data.eliminado==1)
         {
             console.log('Usuario Eliminado Satisfactoriamente')
             alert('Usuario Eliminado Satisfactoriamente')
-             location.href='/visualizar'
+            location.href='/homeowner'
 
         }
         else
@@ -164,6 +161,49 @@ $.ajax({
     }
 
 })
+
 }
 
-*/
+
+// FUNCION PARA ACTUALIZAR UN PROPIETARIO
+function Actualizar(){
+
+    var datos={
+        "Primer_Nombre":document.getElementById("primer_Nombre").value,
+        "Segundo_Nombre":document.getElementById("segundo_Nombre").value,
+        "Primer_Apellido":document.getElementById("primer_Apellido").value,
+        "Segundo_Apellido":document.getElementById("segundo_Apellido").value,
+        "Correo":document.getElementById("correo").value,
+        "Telefono":document.getElementById("telefono").value,
+        "Direccion_De_Contacto":document.getElementById("direccion_De_Contacto").value,
+        "Documento_De_Identidad":document.getElementById("documento_De_Identidad").value
+
+
+
+    }
+    console.log(datos)
+    $.ajax({
+        type:"post",
+        url:"http://localhost:3009/updatePropietario",
+        data:datos,
+        dataType:"json",
+        success:function(data){
+            if(data.save==1)
+            {   
+                console.log('Usuario Actualizado Satisfactoriamente')
+                alert('Usuario Actualizado Satisfactoriamente')
+                location.href='/homeowner'
+
+            }
+            else
+            {
+                console.log('Error')
+                alert('Error - Usuario No Actualizado Registrado')
+
+            }
+
+
+        }
+
+    })
+}
