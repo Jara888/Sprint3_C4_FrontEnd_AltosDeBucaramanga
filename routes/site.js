@@ -14,4 +14,9 @@ res.render("Propietarios")
 
 })
 
+router.get("/property",(req,res)=>{
+res.render("Inmuebles")
+
+})
+
 module.exports=router
