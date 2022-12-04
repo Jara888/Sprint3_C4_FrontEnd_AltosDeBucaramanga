@@ -21,7 +21,7 @@ $.ajax({
 		{
 			console.log('Inmueble registrado - OK')
 			alert('El Inmueble fue registrado Satisfactoriamente')
-			location.href='Inmuebles'
+			location.href='property'
 		}
 		else
 		{
@@ -53,7 +53,7 @@ function Actualizar_Inmueble(){
 		{
 			console.log('Inmueble Actualizado')
 			alert('Inmueble Actualizado')
-			location.href='Inmueble'
+			location.href='property'
 		}
 		else
 		{
