@@ -32,7 +32,7 @@ if (data.save==1)
 
 	alert('usuario almacenado correctamente')
 	console.log('usuario almacenado correctamente')
-	location.href='/homeowner'
+	location.href='/Inmuebless'
 }
 
 else

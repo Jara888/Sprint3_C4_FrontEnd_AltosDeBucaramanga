@@ -21,7 +21,7 @@ $.ajax({
 		{
 			console.log('Inmueble registrado - OK')
 			alert('El Inmueble fue registrado Satisfactoriamente')
-			location.href='property'
+			location.href='Home'
 		}
 		else
 		{

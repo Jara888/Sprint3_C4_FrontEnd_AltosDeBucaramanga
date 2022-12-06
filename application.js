@@ -15,8 +15,4 @@ app.use(express.static(path.join(__dirname,'Public')))
 app.listen(app.get('port'),()=>{
 console.log("Website escuchando por el puerto",app.get('port'))
 console.log(__dirname)
-
-
-
-
 })
