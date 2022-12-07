@@ -18,6 +18,10 @@ router.get("/Facturass",(req,res)=>{
 res.render("Facturas")
 })
 
+router.get("/Reportess",(req,res)=>{
+    res.render("reportes")
+    })
+
 router.get("/loginn",(req,res)=>{
 res.render("Index")
 })
